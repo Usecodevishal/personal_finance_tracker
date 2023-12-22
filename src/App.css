@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -9,7 +9,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 1000s linear;
   }
 }
 
@@ -35,4 +35,22 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+.wrapper, .charts-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  height:90vh;
+}
+
+.charts-wrapper{
+  justify-content: space-between;
+  height:auto;
+  border-radius: 0.5rem;
+  box-shadow:var(--shadow);
+  padding:2rem;
+  margin:2rem;
 }

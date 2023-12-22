@@ -1,0 +1,31 @@
+.input-wrapper{
+    margin-bottom:1.8rem;
+    display:flex;
+    flex-direction: column;
+    gap:0.4rem;
+}
+
+.label-input{
+    font-size:1rem;
+    text-transform: capitalize;
+    /* margin-bottom:0.4rem; */
+}
+
+.custom-input-user{
+    border:none;
+    border-bottom: 1px solid #000;
+    width:100%;
+    padding:0.5rem 0rem;
+    font-size:0.9rem;
+    opacity:0.8;
+}
+
+.custom-input-user:focus{
+    outline: none;
+    opacity:1;
+    transition: all 0.3s;
+}
+
+.custom-input-user::placeholder{
+    color:grey;
+}

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Cards from "../components/Cards";
-import { Modal } from "antd";
-import moment from "moment";
+// import { Modal } from "antd";
+// import moment from "moment";
 import AddExpenseModal from "../components/Modals/addExpense";
 import AddIncomeModal from "../components/Modals/addIncome";
 import { toast } from "react-toastify";
@@ -83,7 +83,7 @@ const Dashboard = () => {
       const querySnapshot = await getDocs(q);
       let transactionsArray = [];
       querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
+        
         transactionsArray.push(doc.data());
       });
       setTransactions(transactionsArray);
@@ -114,9 +114,7 @@ const Dashboard = () => {
       }
     });
 
-    // setIncome(incomeTotal);
-    // setExpense(expensesTotal);
-    // setCurrentBalance(incomeTotal - expensesTotal);
+    
   };
 
   const sortedTransactions = transactions.sort((a,b) => {
@@ -124,7 +122,12 @@ const Dashboard = () => {
   })
 
   function reset(){
+    //  reset all the transactions to empty array will be the solution first of all ?.
     console.log("resetting");
+    setTransactions([]);
+    setIncome(0);
+    setExpense(0);
+    setCurrentBalance(0);
   }
 
   return (
